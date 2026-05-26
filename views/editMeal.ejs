@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <title>Edit Meal</title>
+</head>
+
+<body>
+
+    <%- include('partials/navbar.ejs') %>
+
+    <div class="container mt-4">
+
+        <h1 class="mb-3">Edit Meal</h1>
+
+        <form action="/meals/edit/<%= index %>" method="POST" class="card p-4 shadow-sm">
+
+            <div class="mb-3">
+                <label class="form-label">Meal Name</label>
+                <input name="name" value="<%= meal.name %>" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Location</label>
+                <input name="location" value="<%= meal.location %>" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Calories</label>
+                <input name="calories" type="number" value="<%= meal.calories %>" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Rating</label>
+                <input name="rating" type="number" value="<%= meal.rating %>" class="form-control" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Comment</label>
+                <input name="comment" value="<%= meal.comment %>" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-success">Update</button>
+            <a href="/meals/<%= index %>" class="btn btn-secondary ms-2">Back</a>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+
+

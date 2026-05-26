@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Meal Tracker</title>
+</head>
+
+<body class="bg-light">
+
+    <!-- NAVBAR -->
+    <%- include('partials/navbar') %>
+
+    <!-- CAROUSEL -->
+<div id="mealCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+
+    <!-- Indicators -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#mealCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#mealCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#mealCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <!-- Slides -->
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e" class="d-block w-100" style="height:400px; object-fit:cover;" alt="Meal 1">
+            <div class="carousel-caption">
+                <h5>Track Your Meals</h5>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" class="d-block w-100" style="height:400px; object-fit:cover;" alt="Meal 2">
+            <div class="carousel-caption">
+                <h5>Rate Your Food</h5>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2" class="d-block w-100" style="height:400px; object-fit:cover;" alt="Meal 3">
+            <div class="carousel-caption">
+                <h5>Save Your Favorites</h5>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#mealCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#mealCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+<!-- HOME PAGE CONTENT -->
+<div class="container py-5">
+
+    <!-- Title -->
+    <div class="text-center mb-4">
+        <h1 class="display-4 fw-bold">🍱 Meal Tracker</h1>
+
+        <p class="lead text-muted">
+            Track your meals, ratings, and food experiences easily.
+        </p>
+    </div>
+
+    <!-- FEATURE CARDS -->
+    <div class="row justify-content-center g-4">
+
+        <!-- View Meals -->
+        <div class="col-md-5 col-lg-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center p-4">
+
+                    <h2 class="mb-3">📋</h2>
+
+                    <h3>View Meals</h3>
+
+                    <p class="text-muted">
+                        Browse all saved meals and view meal details.
+                    </p>
+
+                    <a href="/meals" class="btn btn-dark px-4">
+                        View Meals
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Meal -->
+        <div class="col-md-5 col-lg-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body text-center p-4">
+
+                    <h2 class="mb-3">➕</h2>
+
+                    <h3>Add Meal</h3>
+
+                    <p class="text-muted">
+                        Add new meals with ratings and comments.
+                    </p>
+
+                    <a href="/meals/add" class="btn btn-success px-4">
+                        Add Meal
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    
+                   
+      
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
